@@ -12,10 +12,14 @@ let currentPercent = 0;
 peopleInput.value = null;
 input.value = null;
 
-function calculate(num) {
+const calculate = (num) => {
     currentPercent = num;
 
     if (peopleInput.value == "") {
+        return;
+    }
+
+    if (input.value == "") {
         return;
     }
 
@@ -30,7 +34,7 @@ function calculate(num) {
 
     output.innerHTML = splitTip.toFixed(2);
     perPersonOutput.innerHTML = splitTotal.toFixed(2);
-}
+};
 
 // this code runs whenever an input is changed. is is the same as the calculate function but doesn't use the (num) parameter
 for (let i = 0; i < inputs.length; i++) {
@@ -40,6 +44,10 @@ for (let i = 0; i < inputs.length; i++) {
         }
 
         if (currentPercent == 0) {
+            return;
+        }
+
+        if (input.value == "") {
             return;
         }
 
