@@ -6,25 +6,24 @@ const perPersonOutput = document.querySelector(".split");
 
 const inputs = document.querySelectorAll(".inputs");
 
+// peopleInput.value = "2";
+
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function () {
-        let bill = input.value;
-        let billToNum = parseFloat(bill);
-        console.log(billToNum);
-
-        let numPeople = peopleInput.value;
-        let numPeopleToNum = parseInt(numPeople);
-
-        if (numPeople == "") {
+        if (peopleInput.value == "") {
             return;
         }
 
-        let tip = billToNum * 0.15;
-        let splitTip = tip / numPeopleToNum;
+        let bill = parseFloat(input.value);
 
-        let total = billToNum + tip;
-        console.log(total);
-        let split = total / numPeopleToNum;
+        let numPeople = parseInt(peopleInput.value);
+        console.log(numPeople);
+
+        let tip = bill * 0.15;
+        let splitTip = tip / numPeople;
+
+        let total = bill + tip;
+        let split = total / numPeople;
 
         output.innerHTML = splitTip.toFixed(2);
         perPersonOutput.innerHTML = split.toFixed(2);
