@@ -26,10 +26,10 @@ function calculate(num) {
     let splitTip = tip / numPeople;
 
     let total = bill + tip;
-    let split = total / numPeople;
+    let splitTotal = total / numPeople;
 
     output.innerHTML = splitTip.toFixed(2);
-    perPersonOutput.innerHTML = split.toFixed(2);
+    perPersonOutput.innerHTML = splitTotal.toFixed(2);
 }
 
 // this code runs whenever an input is changed. is is the same as the calculate function but doesn't use the (num) parameter
@@ -50,10 +50,10 @@ for (let i = 0; i < inputs.length; i++) {
         let splitTip = tip / numPeople;
 
         let total = bill + tip;
-        let split = total / numPeople;
+        let splitTotal = total / numPeople;
 
         output.innerHTML = splitTip.toFixed(2);
-        perPersonOutput.innerHTML = split.toFixed(2);
+        perPersonOutput.innerHTML = splitTotal.toFixed(2);
     });
 }
 
