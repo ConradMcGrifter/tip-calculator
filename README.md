@@ -37,13 +37,18 @@ Users should be able to:
 
 ## My process
 
+I first messed around in codepen to figure out how I was going to do this project [codepen link](https://codepen.io/ConradMcGrifter/pen/ZEKZzeo?editors=1111)
+
 ### Built with
 
 ### What I learned
 
 ### Useful resources
 
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+-   [resource 1](https://stackoverflow.com/questions/68482512/how-to-round-of-decimal-numbers-and-get-exact-sum-if-added) - this helped me with limiting the number of decimals that get output.
+    (using toFixed() method)
+
+-   [resource 2](https://www.w3schools.com/jsref/dom_obj_event.asp)
+-   this list of HTML DOM events helped me because I wasnt sure how to get the total number to appear on screen as soon as the number of people was entered into the input field. I used the "input" eventListener to achieve this.
 
 ## Acknowledgments
