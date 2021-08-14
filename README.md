@@ -49,6 +49,6 @@ I first messed around in codepen to figure out how I was going to do this projec
     (using toFixed() method)
 
 -   [resource 2](https://www.w3schools.com/jsref/dom_obj_event.asp)
--   this list of HTML DOM events helped me because I wasnt sure how to get the total number to appear on screen as soon as the number of people was entered into the input field. I used the "input" eventListener to achieve this.
+    this list of HTML DOM events helped me because I wasnt sure how to get the total number to appear on screen as soon as the number of people was entered into the input field. I used the "input" eventListener to achieve this.
 
 ## Acknowledgments
