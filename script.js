@@ -1,6 +1,8 @@
 const input = document.querySelector("input");
 const peopleInput = document.querySelector(".people");
-const button = document.getElementById("button");
+const fifteenPercent = document.getElementById("button");
+const thirtyPercent = document.getElementById("button2");
+const reset = document.querySelector(".reset");
 const output = document.querySelector(".output");
 const perPersonOutput = document.querySelector(".split");
 
@@ -11,7 +13,13 @@ let currentPercent = 0;
 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function () {
+        // currentPercent;
+
         if (peopleInput.value == "") {
+            return;
+        }
+
+        if (currentPercent == 0) {
             return;
         }
 
@@ -31,7 +39,6 @@ for (let i = 0; i < inputs.length; i++) {
 
 function calculate(num) {
     currentPercent = num;
-    console.log(currentPercent);
 
     if (peopleInput.value == "") {
         return;
@@ -50,6 +57,18 @@ function calculate(num) {
     perPersonOutput.innerHTML = split.toFixed(2);
 }
 
-button.addEventListener("click", () => {
+fifteenPercent.addEventListener("click", () => {
     calculate(0.15);
+});
+
+thirtyPercent.addEventListener("click", () => {
+    calculate(0.3);
+});
+
+reset.addEventListener("click", () => {
+    peopleInput.value = null;
+    input.value = null;
+
+    output.innerHTML = "";
+    perPersonOutput.innerHTML = "";
 });
