@@ -27,15 +27,63 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <input type="text" class="inputs" />
-        <input type="text" class="people inputs" />
+        <main class="calculator">
+            <div class="calculate--container">
+                <div class="calculate__bill--wrap">
+                    <h2 class="bill__h2">Bill</h2>
+                    <input type="text" class="bill-input" />
+                </div>
+                <div class="calculate__tip--wrap">
+                    <h2 class="tip__h2">Select Tip %</h2>
+                    <div class="tip__grid">
+                        <button class="grid__items">5%</button
+                        ><button class="grid__items">10%</button
+                        ><button class="grid__items">15%</button
+                        ><button class="grid__items">25%</button
+                        ><button class="grid__items">50%</button>
+                        <input
+                            type="text"
+                            class="grid__items custom"
+                            placeholder="Custom"
+                        />
+                    </div>
+                </div>
+                <div class="calculate__number-people--wrap">
+                    <div class="number-people__title--wrap">
+                        <h2 class="title__h2">Number of People</h2>
+                        <h2 class="title-error__h2">Can't be zero</h2>
+                    </div>
+                    <input type="text" class="people-input" />
+                </div>
+            </div>
+            <div class="total--container">
+                <div class="total__output--wrap">
+                    <div class="tip-per-person--wrap">
+                        <div class="tip-per-person__text--wrap">
+                            <h2 class="text__h2">Tip Amount</h2>
+                            <p class="text__p">/ person</p>
+                        </div>
+                        <h3 class="tip__output"></h3>
+                    </div>
+                    <div class="total-per-person--wrap">
+                        <h2 class="text__h2">Total</h2>
+                        <p class="text__p">/ person</p>
+                    </div>
+                    <h3 class="total__output"></h3>
+                </div>
+
+                <button class="reset">RESET</button>
+            </div>
+        </main>
+        <!-- <input type="text" class="inputs bill-input" />
+        <input type="text" class="people-input inputs" />
         <button id="button">15</button>
         <button id="button2">30</button>
         <button class="reset">reset</button>
         <h3>tip per person</h3>
         <p class="output"></p>
         <h3>total per person</h3>
-        <p class="split"></p>
+        <p class="split"></p> -->
 
         <!-- Bill
 
@@ -57,7 +105,7 @@
 
   Reset
   
-        <!-- <div class="attribution">
+        <div class="attribution">
             Challenge by
             <a
                 href="https://www.frontendmentor.io?ref=challenge"
@@ -65,6 +113,6 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Your Name Here</a>.
         </div> -->
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
     </body>
 </html>

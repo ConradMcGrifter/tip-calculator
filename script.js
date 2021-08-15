@@ -1,9 +1,10 @@
-const billInput = document.querySelector("input");
-const peopleInput = document.querySelector(".people");
-const inputs = document.querySelectorAll(".inputs");
+const billInput = document.querySelector(".bill-input");
+const peopleInput = document.querySelector(".people-input");
+// const inputs = document.querySelectorAll(".inputs");
+const inputs = document.querySelectorAll("input");
 
-const tipOutput = document.querySelector(".output");
-const totalPerPersonOutput = document.querySelector(".split");
+const tipOutput = document.querySelector(".tip__output");
+const totalPerPersonOutput = document.querySelector(".total__output");
 
 const reset = document.querySelector(".reset");
 
