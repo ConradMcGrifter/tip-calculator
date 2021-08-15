@@ -1,5 +1,9 @@
-@import "utils/functions", "utils/mixins", "utils/variables";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
-body {
-    background: coral;
-}
+@import "abstracts/variables", "abstracts/mixins", "abstracts/functions";
+
+@import "base/resets", "base/typography";
+
+@import "layout/calculator";
+
+@import "components/buttons", "components/inputs";
