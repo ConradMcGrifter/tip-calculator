@@ -40,6 +40,10 @@
             grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
             grid-auto-rows: 4rem;
             grid-gap: 1rem;
+
+            @include mobileSize {
+                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            }
         }
     }
 
