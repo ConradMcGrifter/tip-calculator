@@ -16,7 +16,7 @@ let currentPercent = 0;
 peopleInput.value = null;
 billInput.value = null;
 
-const calculate = (num) => {
+const calc = (num) => {
     currentPercent = num;
 
     //dont run code if the input field is blank or if it contains letters
@@ -68,11 +68,11 @@ for (let i = 0; i < inputs.length; i++) {
 }
 
 fifteenPercent.addEventListener("click", () => {
-    calculate(0.15);
+    calc(0.15);
 });
 
 thirtyPercent.addEventListener("click", () => {
-    calculate(0.3);
+    calc(0.3);
 });
 
 reset.addEventListener("click", () => {
