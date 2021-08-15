@@ -94,4 +94,8 @@ reset.addEventListener("click", () => {
 
     tipOutput.innerHTML = "$00.00";
     totalPerPersonOutput.innerHTML = "$00.00";
+
+    for (let i = 0; i < tipButtons.length; i++) {
+        tipButtons[i].classList.remove("selected");
+    }
 });

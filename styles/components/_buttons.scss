@@ -3,12 +3,13 @@ button {
     width: 100%;
     font-size: 2.4rem;
     font-family: $font-stack;
+    cursor: pointer;
+    border-radius: $radius;
 }
 
 .grid__buttons {
     background: color(very-dark-cyan);
     color: white;
-    cursor: pointer;
 
     &:hover {
         background: color(primary-cyan);
@@ -23,6 +24,9 @@ button {
     background: color(primary-cyan);
     color: color(very-dark-cyan);
     opacity: 0.25;
+    font-size: 2rem;
+    padding: 0.25em;
+    font-weight: weight(bold);
 
     &:hover {
         opacity: 1;

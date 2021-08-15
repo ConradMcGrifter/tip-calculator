@@ -3,42 +3,112 @@
     display: flex;
     width: 100%;
     max-width: $max-width;
-    padding: 1em;
+    padding: 1em 1em 1em 0;
+    border-radius: $radius;
+
+    @include mobileSize {
+        flex-direction: column;
+        padding: 0.5em;
+    }
 }
 
 .calculate--container {
     width: 100%;
-    outline: solid red 2px;
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
+
+    @include mobileSize {
+        padding: 0.5em;
+    }
 
     .calculate__bill--wrap {
-        outline: solid rgb(14, 184, 65) 1px;
+        .bill-input--wrap {
+            position: relative;
+
+            .bill__img {
+                position: absolute;
+                left: 0.5em;
+                transform: translateY(50%);
+            }
+        }
     }
 
     .calculate__tip--wrap {
-        margin-top: 1rem;
-        outline: solid blue 2px;
+        margin-top: 2.5rem;
 
         .tip__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            grid-auto-rows: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+            grid-auto-rows: 4rem;
             grid-gap: 1rem;
         }
     }
 
     .calculate__number-people--wrap {
-        margin-top: 1rem;
-        outline: solid rgb(10, 195, 241) 2px;
+        margin-top: 2.5rem;
 
         .number-people__title--wrap {
             display: flex;
             justify-content: space-between;
         }
+
+        .people-input--wrap {
+            position: relative;
+
+            .people__img {
+                position: absolute;
+                left: 0.5em;
+                transform: translateY(50%);
+            }
+        }
     }
 }
 
 .total--container {
+    border-radius: $radius;
+    padding: 1.5em;
     width: 100%;
     background: color(very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobileSize {
+        padding: 0.5em;
+    }
+
+    .total__output--wrap {
+        .text__p {
+            font-size: 1.2rem;
+            color: color(dark-grayish-cyan);
+            font-weight: weight(bold);
+        }
+
+        .text__h2 {
+            color: color(light-grayish-cyan);
+            margin: 0;
+        }
+
+        .tip__output,
+        .total__output {
+            color: color(primary-cyan);
+            font-size: 3.6rem;
+        }
+
+        .tip-per-person--wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            // margin-top: 2rem;
+        }
+
+        .total-per-person--wrap {
+            display: flex;
+            flex-wrap: wrap;
+
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+    }
 }

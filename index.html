@@ -31,7 +31,14 @@
             <div class="calculate--container">
                 <div class="calculate__bill--wrap">
                     <h2 class="bill__h2">Bill</h2>
-                    <input type="text" class="bill-input" />
+                    <div class="bill-input--wrap">
+                        <input type="text" class="bill-input" />
+                        <img
+                            src="images/icon-dollar.svg"
+                            alt=""
+                            class="bill__img"
+                        />
+                    </div>
                 </div>
                 <div class="calculate__tip--wrap">
                     <h2 class="tip__h2">Select Tip %</h2>
@@ -54,7 +61,14 @@
                         <h2 class="title__h2">Number of People</h2>
                         <h2 class="title-error__h2">Can't be zero</h2>
                     </div>
-                    <input type="text" class="people-input" />
+                    <div class="people-input--wrap">
+                        <input type="text" class="people-input" />
+                        <img
+                            src="images/icon-person.svg"
+                            alt=""
+                            class="people__img"
+                        />
+                    </div>
                 </div>
             </div>
             <div class="total--container">
@@ -67,10 +81,12 @@
                         <h3 class="tip__output"></h3>
                     </div>
                     <div class="total-per-person--wrap">
-                        <h2 class="text__h2">Total</h2>
-                        <p class="text__p">/ person</p>
+                        <div class="total-output--wrap">
+                            <h2 class="text__h2">Total</h2>
+                            <p class="text__p">/ person</p>
+                        </div>
+                        <h3 class="total__output"></h3>
                     </div>
-                    <h3 class="total__output"></h3>
                 </div>
 
                 <button class="reset">RESET</button>

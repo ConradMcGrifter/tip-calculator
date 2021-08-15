@@ -3,10 +3,18 @@ input {
     font-size: 2.4rem;
     font-family: $font-stack;
     font-weight: weight(bold);
+    text-align: end;
+    padding: 0 1em 0 1.5em;
+    background: color(lighter-grayish-cyan);
+    color: color(very-dark-cyan);
+    border: none;
 }
 
 .custom {
     background: none;
-    color: color(dark-grayish-cyan);
+    color: color(darker-grayish-cyan);
     background: color(lighter-grayish-cyan);
+    text-align: center;
+    padding: 0;
+    font-size: 1.8rem;
 }
