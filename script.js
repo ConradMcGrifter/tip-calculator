@@ -8,8 +8,11 @@ const totalPerPersonOutput = document.querySelector(".total__output");
 
 const reset = document.querySelector(".reset");
 
-const fifteenPercent = document.getElementById("button");
-const thirtyPercent = document.getElementById("button2");
+const fivePercent = document.getElementById("five");
+const tenPercent = document.getElementById("ten");
+const fifteenPercent = document.getElementById("fifteen");
+const twentyFivePercent = document.getElementById("twenty-five");
+const fiftyPercent = document.getElementById("fifty");
 
 let regex = /[A-Za-z]/;
 let currentPercent = 0;
@@ -55,12 +58,16 @@ inputs.forEach((input) => {
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 //event listeners for the different percent buttons
 
-fifteenPercent.addEventListener("click", () => {
-    calc(0.15);
+fivePercent.addEventListener("click", () => {
+    calc(0.05);
 });
 
-thirtyPercent.addEventListener("click", () => {
-    calc(0.3);
+tenPercent.addEventListener("click", () => {
+    calc(0.1);
+});
+
+fifteenPercent.addEventListener("click", () => {
+    calc(0.15);
 });
 
 reset.addEventListener("click", () => {

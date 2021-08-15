@@ -41,7 +41,7 @@ h2 {
 }
 
 .calculator {
-  background: #f4fafa;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,10 +93,43 @@ h2 {
   background: #00494d;
 }
 
+button {
+  border: none;
+  width: 100%;
+  font-size: 2.4rem;
+  font-family: "Space Mono", Arial, Helvetica, sans-serif;
+}
+
+.grid__buttons {
+  background: #00494d;
+  color: white;
+  cursor: pointer;
+}
+
+.grid__buttons:hover {
+  background: #26c0ab;
+}
+
+.reset {
+  background: #26c0ab;
+  color: #00494d;
+  opacity: 0.25;
+}
+
+.reset:hover {
+  opacity: 1;
+}
+
 input {
   width: 100%;
   font-size: 2.4rem;
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
   font-weight: 700;
+}
+
+.custom {
+  background: none;
+  color: #7f9c9f;
+  background: #f4fafa;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,1 +1,26 @@
+button {
+    border: none;
+    width: 100%;
+    font-size: 2.4rem;
+    font-family: $font-stack;
+}
 
+.grid__buttons {
+    background: color(very-dark-cyan);
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background: color(primary-cyan);
+    }
+}
+
+.reset {
+    background: color(primary-cyan);
+    color: color(very-dark-cyan);
+    opacity: 0.25;
+
+    &:hover {
+        opacity: 1;
+    }
+}

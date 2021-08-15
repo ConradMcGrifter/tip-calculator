@@ -4,3 +4,9 @@ input {
     font-family: $font-stack;
     font-weight: weight(bold);
 }
+
+.custom {
+    background: none;
+    color: color(dark-grayish-cyan);
+    background: color(lighter-grayish-cyan);
+}
