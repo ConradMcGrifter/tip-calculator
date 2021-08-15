@@ -15,6 +15,8 @@ let currentPercent = 0;
 
 peopleInput.value = null;
 billInput.value = null;
+tipOutput.innerHTML = "$00.00";
+totalPerPersonOutput.innerHTML = "$00.00";
 
 const calc = (num) => {
     currentPercent = num;
@@ -38,18 +40,20 @@ const calc = (num) => {
     let total = bill + tip;
     let splitTotal = total / numPeople;
 
-    tipOutput.innerHTML = splitTip.toFixed(2);
-    totalPerPersonOutput.innerHTML = splitTotal.toFixed(2);
+    tipOutput.innerHTML = "$" + splitTip.toFixed(2);
+    totalPerPersonOutput.innerHTML = "$" + splitTotal.toFixed(2);
 };
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++
 //this loops through the inputs and adds an eventlistener on each one. the event triggers anytime an input number is changed. this way the user can change the bill ammount and the totals will instantly change (based on the currently set tip %)
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", () => {
         calc(currentPercent);
     });
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++
 //event listeners for the different percent buttons
+
 fifteenPercent.addEventListener("click", () => {
     calc(0.15);
 });
@@ -63,6 +67,6 @@ reset.addEventListener("click", () => {
     billInput.value = null;
     currentPercent = 0;
 
-    tipOutput.innerHTML = "";
-    totalPerPersonOutput.innerHTML = "";
+    tipOutput.innerHTML = "$00.00";
+    totalPerPersonOutput.innerHTML = "$00.00";
 });
