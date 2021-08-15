@@ -1,37 +1,34 @@
-const input = document.querySelector("input");
+const billInput = document.querySelector("input");
 const peopleInput = document.querySelector(".people");
+const inputs = document.querySelectorAll(".inputs");
+
+const tipOutput = document.querySelector(".output");
+const totalPerPersonOutput = document.querySelector(".split");
+
+const reset = document.querySelector(".reset");
+
 const fifteenPercent = document.getElementById("button");
 const thirtyPercent = document.getElementById("button2");
-const reset = document.querySelector(".reset");
-const output = document.querySelector(".output");
-const perPersonOutput = document.querySelector(".split");
 
-const inputs = document.querySelectorAll(".inputs");
 let regex = /[A-Za-z]/;
-
 let currentPercent = 0;
+
 peopleInput.value = null;
-input.value = null;
+billInput.value = null;
 
 const calculate = (num) => {
     currentPercent = num;
 
-    //dont run code if the input field is blank
-    if (peopleInput.value == "") {
+    //dont run code if the input field is blank or if it contains letters
+    if (
+        peopleInput.value == "" ||
+        billInput.value == "" ||
+        regex.test(billInput.value)
+    ) {
         return;
     }
 
-    //dont run code if the input field is blank
-    if (input.value == "") {
-        return;
-    }
-
-    //dont run code if the input field contains letters
-    if (regex.test(input.value)) {
-        return;
-    }
-
-    let bill = parseFloat(input.value);
+    let bill = parseFloat(billInput.value);
     let numPeople = parseInt(peopleInput.value);
 
     let tip = bill * num;
@@ -40,30 +37,23 @@ const calculate = (num) => {
     let total = bill + tip;
     let splitTotal = total / numPeople;
 
-    output.innerHTML = splitTip.toFixed(2);
-    perPersonOutput.innerHTML = splitTotal.toFixed(2);
+    tipOutput.innerHTML = splitTip.toFixed(2);
+    totalPerPersonOutput.innerHTML = splitTotal.toFixed(2);
 };
 
 // this code runs whenever an input is changed. is is the same as the calculate function but doesn't use the (num) parameter
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function () {
-        if (peopleInput.value == "") {
+        if (
+            currentPercent == 0 ||
+            peopleInput.value == "" ||
+            billInput.value == "" ||
+            regex.test(billInput.value)
+        ) {
             return;
         }
 
-        if (currentPercent == 0) {
-            return;
-        }
-
-        if (input.value == "") {
-            return;
-        }
-
-        if (regex.test(input.value)) {
-            return;
-        }
-
-        let bill = parseFloat(input.value);
+        let bill = parseFloat(billInput.value);
         let numPeople = parseInt(peopleInput.value);
 
         let tip = bill * currentPercent;
@@ -72,8 +62,8 @@ for (let i = 0; i < inputs.length; i++) {
         let total = bill + tip;
         let splitTotal = total / numPeople;
 
-        output.innerHTML = splitTip.toFixed(2);
-        perPersonOutput.innerHTML = splitTotal.toFixed(2);
+        tipOutput.innerHTML = splitTip.toFixed(2);
+        totalPerPersonOutput.innerHTML = splitTotal.toFixed(2);
     });
 }
 
@@ -87,9 +77,9 @@ thirtyPercent.addEventListener("click", () => {
 
 reset.addEventListener("click", () => {
     peopleInput.value = null;
-    input.value = null;
+    billInput.value = null;
     currentPercent = 0;
 
-    output.innerHTML = "";
-    perPersonOutput.innerHTML = "";
+    tipOutput.innerHTML = "";
+    totalPerPersonOutput.innerHTML = "";
 });
