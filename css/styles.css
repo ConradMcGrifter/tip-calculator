@@ -17,6 +17,8 @@ html {
 
 input {
   font-size: 2.4rem;
+  font-family: "Space Mono", Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }
 
 body {

@@ -46,11 +46,11 @@ const calc = (num) => {
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 //this loops through the inputs and adds an eventlistener on each one. the event triggers anytime an input number is changed. this way the user can change the bill ammount and the totals will instantly change (based on the currently set tip %)
-for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener("input", () => {
+inputs.forEach((input) => {
+    input.addEventListener("input", () => {
         calc(currentPercent);
     });
-}
+});
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 //event listeners for the different percent buttons
 
