@@ -2,6 +2,7 @@ const billInput = document.querySelector(".bill-input");
 const peopleInput = document.querySelector(".people-input");
 // const inputs = document.querySelectorAll(".inputs");
 const inputs = document.querySelectorAll("input");
+const tipButtons = document.querySelectorAll(".grid__buttons");
 
 const tipOutput = document.querySelector(".tip__output");
 const totalPerPersonOutput = document.querySelector(".total__output");
@@ -48,6 +49,14 @@ const calc = (num) => {
     totalPerPersonOutput.innerHTML = "$" + splitTotal.toFixed(2);
 };
 
+tipButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+        for (let i = 0; i < tipButtons.length; i++) {
+            tipButtons[i].classList.remove("selected");
+        }
+        this.classList.toggle("selected");
+    });
+});
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 //this loops through the inputs and adds an eventlistener on each one. the event triggers anytime an input number is changed. this way the user can change the bill ammount and the totals will instantly change (based on the currently set tip %)
 inputs.forEach((input) => {
@@ -68,6 +77,14 @@ tenPercent.addEventListener("click", () => {
 
 fifteenPercent.addEventListener("click", () => {
     calc(0.15);
+});
+
+twentyFivePercent.addEventListener("click", () => {
+    calc(0.25);
+});
+
+fiftyPercent.addEventListener("click", () => {
+    calc(0.5);
 });
 
 reset.addEventListener("click", () => {

@@ -110,6 +110,10 @@ button {
   background: #26c0ab;
 }
 
+.grid__buttons.selected {
+  background: #26c0ab;
+}
+
 .reset {
   background: #26c0ab;
   color: #00494d;
