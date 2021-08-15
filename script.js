@@ -7,6 +7,7 @@ const output = document.querySelector(".output");
 const perPersonOutput = document.querySelector(".split");
 
 const inputs = document.querySelectorAll(".inputs");
+let regex = /[A-Za-z]/;
 
 let currentPercent = 0;
 peopleInput.value = null;
@@ -15,11 +16,18 @@ input.value = null;
 const calculate = (num) => {
     currentPercent = num;
 
+    //dont run code if the input field is blank
     if (peopleInput.value == "") {
         return;
     }
 
+    //dont run code if the input field is blank
     if (input.value == "") {
+        return;
+    }
+
+    //dont run code if the input field contains letters
+    if (regex.test(input.value)) {
         return;
     }
 
@@ -48,6 +56,10 @@ for (let i = 0; i < inputs.length; i++) {
         }
 
         if (input.value == "") {
+            return;
+        }
+
+        if (regex.test(input.value)) {
             return;
         }
 
