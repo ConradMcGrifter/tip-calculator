@@ -121,8 +121,8 @@ h2 {
 
 @media only screen and (max-width: 750px) {
   .calculate--container .calculate__tip--wrap .tip__grid {
-    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
 
