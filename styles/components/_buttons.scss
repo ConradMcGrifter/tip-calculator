@@ -5,6 +5,7 @@ button {
     font-family: $font-stack;
     cursor: pointer;
     border-radius: $radius;
+    font-weight: weight(bold);
 }
 
 .grid__buttons {
