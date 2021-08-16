@@ -10,6 +10,8 @@ button {
 .grid__buttons {
     background: color(very-dark-cyan);
     color: white;
+    padding: 0.5em 0;
+    @include flexCenter();
 
     &:hover {
         background: color(primary-light-cyan);
@@ -27,8 +29,13 @@ button {
     color: color(very-dark-cyan);
     opacity: 0.25;
     font-size: 2rem;
-    padding: 0.25em;
+    padding: 0.5em;
     font-weight: weight(bold);
+    transition: transform 0.15s;
+
+    @include mobileSize {
+        margin-top: 2rem;
+    }
 
     &.active {
         opacity: 1;
@@ -37,5 +44,9 @@ button {
     &:hover {
         opacity: 1;
         background: color(primary-light-cyan);
+    }
+
+    &:active {
+        transform: translateY(7%);
     }
 }

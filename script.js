@@ -1,5 +1,7 @@
 const billInput = document.querySelector(".bill-input");
 const peopleInput = document.querySelector(".people-input");
+const customInput = document.querySelector(".custom");
+
 const error = document.querySelector(".title-error__h2");
 
 const inputs = document.querySelectorAll("input");
@@ -25,7 +27,14 @@ tipOutput.innerHTML = "$00.00";
 totalPerPersonOutput.innerHTML = "$00.00";
 
 const calc = (num) => {
+    // set the global percent
     currentPercent = num;
+
+    if (!customInput.value == "") {
+        currentPercent = parseFloat(customInput.value) / 100;
+    } else {
+        customInput.value = "";
+    }
 
     //if the input field is blank or if it contains letters, dont run the code
     if (
@@ -73,6 +82,7 @@ tipButtons.forEach((button) => {
         for (let i = 0; i < tipButtons.length; i++) {
             tipButtons[i].classList.remove("selected");
         }
+        customInput.value = "";
         this.classList.toggle("selected");
     });
 });
@@ -91,6 +101,7 @@ reset.addEventListener("click", () => {
     billInput.value = null;
     currentPercent = 0;
 
+    customInput.value = "";
     tipOutput.innerHTML = "$00.00";
     totalPerPersonOutput.innerHTML = "$00.00";
 
@@ -101,6 +112,17 @@ reset.addEventListener("click", () => {
     reset.classList.remove("active");
     error.classList.remove("active");
     peopleInput.classList.remove("active");
+});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++
+// event listener for the custom percent input
+
+customInput.addEventListener("input", () => {
+    calc(currentPercent);
+
+    tipButtons.forEach((button) => {
+        button.classList.remove("selected");
+    });
 });
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++

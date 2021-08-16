@@ -24,7 +24,7 @@
 
 .calculate--container {
     width: 100%;
-    padding: 0.5em 1.5em;
+    padding: 0.75em 1.5em;
 
     @include mobileSize {
         padding: 0.5em;
@@ -36,7 +36,7 @@
 
             .bill__img {
                 position: absolute;
-                left: 0.5em;
+                left: 1em;
                 transform: translateY(1.5rem);
             }
         }
@@ -47,8 +47,8 @@
 
         .tip__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-            grid-auto-rows: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+            grid-auto-rows: 5rem;
             grid-gap: 1rem;
 
             @include mobileSize {
@@ -79,7 +79,7 @@
 
             .people__img {
                 position: absolute;
-                left: 0.5em;
+                left: 1em;
                 transform: translateY(1.5rem);
             }
         }
@@ -101,7 +101,7 @@
 
     .total__output--wrap {
         .text__p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: color(dark-grayish-cyan);
             font-weight: weight(bold);
         }
@@ -114,7 +114,11 @@
         .tip__output,
         .total__output {
             color: color(primary-cyan);
-            font-size: 3.6rem;
+            font-size: 4rem;
+
+            @include mobileSize {
+                font-size: 3.2rem;
+            }
         }
 
         .tip-per-person--wrap {
