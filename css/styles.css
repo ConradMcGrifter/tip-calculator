@@ -263,7 +263,7 @@ button {
           flex-direction: row;
 }
 
-.grid__buttons:hover {
+.grid__buttons:hover, .grid__buttons:focus {
   background: #65f1de;
   color: black;
 }
@@ -296,7 +296,7 @@ button {
   opacity: 1;
 }
 
-.reset:hover {
+.reset:hover, .reset:focus {
   opacity: 1;
   background: #65f1de;
 }
