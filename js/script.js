@@ -59,7 +59,8 @@ const calc = (num) => {
         currentPercent = parseFloat(customInput.value) / 100;
     } else {
         customInput.value = "";
-        
+        tipOutput.innerHTML = "$00.00";
+        totalPerPersonOutput.innerHTML = "$00.00";
     }
 
     //if the input field is blank dont run the code
@@ -142,6 +143,10 @@ reset.addEventListener("click", () => {
 // event listener for the custom percent input
 
 customInput.addEventListener("input", () => {
+
+    if(customInput.value == "") {
+        currentPercent = 0;
+    }
     calc(currentPercent);
 
     tipButtons.forEach((button) => {
