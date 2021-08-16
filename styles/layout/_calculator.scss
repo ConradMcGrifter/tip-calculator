@@ -1,10 +1,15 @@
+.logo {
+    margin-bottom: 10rem;
+}
+
 .calculator {
     background: white;
     display: flex;
     width: 100%;
     max-width: $max-width;
     padding: 1em 1em 1em 0;
-    border-radius: $radius;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px 5px rgba(8, 47, 63, 0.2);
 
     @include mobileSize {
         flex-direction: column;
@@ -27,7 +32,7 @@
             .bill__img {
                 position: absolute;
                 left: 0.5em;
-                transform: translateY(50%);
+                transform: translateY(1.5rem);
             }
         }
     }
@@ -70,14 +75,14 @@
             .people__img {
                 position: absolute;
                 left: 0.5em;
-                transform: translateY(50%);
+                transform: translateY(1.5rem);
             }
         }
     }
 }
 
 .total--container {
-    border-radius: $radius;
+    border-radius: 1.5rem;
     padding: 1.5em;
     width: 100%;
     background: color(very-dark-cyan);

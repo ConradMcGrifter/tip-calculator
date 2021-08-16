@@ -15,14 +15,19 @@ html {
 body {
     width: 100%;
     min-height: 100%;
-    background: color(primary-cyan);
+    background: lightblue;
     font-family: $font-stack;
     font-size: 2.4rem;
     @include flexCenter(column);
+
+    @include mobileSize {
+        justify-content: flex-end;
+    }
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+
     color: color(darker-grayish-cyan);
     margin-bottom: 1rem;
 }

@@ -18,7 +18,7 @@ html {
 body {
   width: 100%;
   min-height: 100%;
-  background: #26c0ab;
+  background: lightblue;
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   display: -webkit-box;
@@ -36,10 +36,22 @@ body {
           flex-direction: column;
 }
 
+@media only screen and (max-width: 550px) {
+  body {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #5e7a7d;
   margin-bottom: 1rem;
+}
+
+.logo {
+  margin-bottom: 10rem;
 }
 
 .calculator {
@@ -48,9 +60,11 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   padding: 1em 1em 1em 0;
-  border-radius: 0.75rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 25px 50px 5px rgba(8, 47, 63, 0.2);
+          box-shadow: 0 25px 50px 5px rgba(8, 47, 63, 0.2);
 }
 
 @media only screen and (max-width: 550px) {
@@ -81,8 +95,8 @@ h2 {
 .calculate--container .calculate__bill--wrap .bill-input--wrap .bill__img {
   position: absolute;
   left: 0.5em;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
 }
 
 .calculate--container .calculate__tip--wrap {
@@ -134,12 +148,12 @@ h2 {
 .calculate--container .calculate__number-people--wrap .people-input--wrap .people__img {
   position: absolute;
   left: 0.5em;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
 }
 
 .total--container {
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
   padding: 1.5em;
   width: 100%;
   background: #00494d;
@@ -213,7 +227,7 @@ button {
   font-size: 2.4rem;
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
   cursor: pointer;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .grid__buttons {
@@ -255,11 +269,11 @@ input {
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-align: end;
-  padding: 0 1em 0 1.5em;
-  background: #f4fafa;
+  padding: 0.15em 1em 0.15em 1.5em;
+  background: rgba(197, 228, 231, 0.363);
   color: #00494d;
   border: none;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .custom {
