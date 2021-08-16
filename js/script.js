@@ -18,7 +18,9 @@ const fifteenPercent = document.getElementById("fifteen");
 const twentyFivePercent = document.getElementById("twenty-five");
 const fiftyPercent = document.getElementById("fifty");
 
-let validateInput = /[A-Za-z]/;
+
+let inputValidation = /[^0-9.]/;
+
 let currentPercent = 0;
 
 peopleInput.value = null;
@@ -29,6 +31,7 @@ totalPerPersonOutput.innerHTML = "$00.00";
 const calc = (num) => {
     // set the global percent
     currentPercent = num;
+    
 
     // if the user doesnt use the reset button and instead just deletes the number in the bill input, this code will reset the output to 00.00
     if (billInput.value.length == 0) {
@@ -36,31 +39,30 @@ const calc = (num) => {
         totalPerPersonOutput.innerHTML = "$00.00";
     }
 
-    // this resets the bill input if the user types tries to type a negative number or letters
-    if (billInput.value.includes("-") || validateInput.test(billInput.value)) {
-        billInput.value = "";
-        tipOutput.innerHTML = "$00.00";
-        totalPerPersonOutput.innerHTML = "$00.00";
+    // this regex checks the "bill" input value to see if it contains any letters or special characters, if it does then the value is set to an empty string
+    if (inputValidation.test(billInput.value)) {
+            billInput.value = "";
+            tipOutput.innerHTML = "$00.00";
+            totalPerPersonOutput.innerHTML = "$00.00";
     }
 
-    // this resets the number of people input if the user tries to type a letter or negative number
-    if (
-        peopleInput.value.includes("-") ||
-        validateInput.test(peopleInput.value)
-    ) {
+    // this regex checks the "number of people" input value to see if it contains any letters or special characters, if it does then the value is set to an empty string
+    if (inputValidation.test(peopleInput.value)) {
         peopleInput.value = "";
         tipOutput.innerHTML = "$00.00";
         totalPerPersonOutput.innerHTML = "$00.00";
     }
 
-    if (!customInput.value == "" && !customInput.value.includes("-")) {
-        // checks if the custom input has a number inside it
+    
+    // checks if the custom input has a number inside it
+    if (!customInput.value == "" && !inputValidation.test(customInput.value)) {
         currentPercent = parseFloat(customInput.value) / 100;
     } else {
         customInput.value = "";
+        
     }
 
-    //if the input field is blank or if it contains letters, dont run the code
+    //if the input field is blank dont run the code
     if (billInput.value == "" || currentPercent == 0) {
         return;
     }
@@ -69,6 +71,8 @@ const calc = (num) => {
     if (peopleInput.value == "" || peopleInput.value <= 0) {
         error.classList.add("active");
         peopleInput.classList.add("active");
+        tipOutput.innerHTML = "$00.00";
+        totalPerPersonOutput.innerHTML = "$00.00";
         return;
     }
 
@@ -147,23 +151,12 @@ customInput.addEventListener("input", () => {
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 //event listeners for the different percent buttons
+fivePercent.addEventListener("click", () => {calc(0.05)});
 
-fivePercent.addEventListener("click", () => {
-    calc(0.05);
-});
+tenPercent.addEventListener("click", () => {calc(0.1)});
 
-tenPercent.addEventListener("click", () => {
-    calc(0.1);
-});
+fifteenPercent.addEventListener("click", () => {calc(0.15)});
 
-fifteenPercent.addEventListener("click", () => {
-    calc(0.15);
-});
+twentyFivePercent.addEventListener("click", () => {calc(0.25)});
 
-twentyFivePercent.addEventListener("click", () => {
-    calc(0.25);
-});
-
-fiftyPercent.addEventListener("click", () => {
-    calc(0.5);
-});
+fiftyPercent.addEventListener("click", () => {calc(0.5)});
