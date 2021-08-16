@@ -53,6 +53,15 @@
         .number-people__title--wrap {
             display: flex;
             justify-content: space-between;
+
+            .title-error__h2 {
+                color: orangered;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
         }
 
         .people-input--wrap {

@@ -28,13 +28,30 @@ const calc = (num) => {
 
     //dont run code if the input field is blank or if it contains letters
     if (
-        peopleInput.value == "" ||
+        // peopleInput.value == "" ||
         billInput.value == "" ||
         currentPercent == 0 ||
         regex.test(billInput.value)
     ) {
         return;
     }
+
+    if (peopleInput.value == "" || peopleInput.value <= 0) {
+        document.querySelector(".title-error__h2").classList.add("active");
+        document.querySelector(".people-input").classList.add("active");
+        return;
+    }
+
+    if (
+        !peopleInput.value == "" &&
+        !currentPercent == 0 &&
+        !billInput.value == ""
+    ) {
+        reset.classList.add("active");
+    }
+
+    document.querySelector(".title-error__h2").classList.remove("active");
+    document.querySelector(".people-input").classList.remove("active");
 
     let bill = parseFloat(billInput.value);
     let numPeople = parseInt(peopleInput.value);
@@ -98,4 +115,8 @@ reset.addEventListener("click", () => {
     for (let i = 0; i < tipButtons.length; i++) {
         tipButtons[i].classList.remove("selected");
     }
+
+    reset.classList.remove("active");
+    document.querySelector(".title-error__h2").classList.remove("active");
+    document.querySelector(".people-input").classList.remove("active");
 });

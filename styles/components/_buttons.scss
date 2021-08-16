@@ -12,11 +12,13 @@ button {
     color: white;
 
     &:hover {
-        background: color(primary-cyan);
+        background: color(primary-light-cyan);
+        color: black;
     }
 
     &.selected {
         background: color(primary-cyan);
+        color: black;
     }
 }
 
@@ -28,7 +30,12 @@ button {
     padding: 0.25em;
     font-weight: weight(bold);
 
+    &.active {
+        opacity: 1;
+    }
+
     &:hover {
         opacity: 1;
+        background: color(primary-light-cyan);
     }
 }

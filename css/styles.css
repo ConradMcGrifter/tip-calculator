@@ -17,7 +17,7 @@ html {
 
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: #26c0ab;
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
@@ -118,6 +118,15 @@ h2 {
           justify-content: space-between;
 }
 
+.calculate--container .calculate__number-people--wrap .number-people__title--wrap .title-error__h2 {
+  color: orangered;
+  display: none;
+}
+
+.calculate--container .calculate__number-people--wrap .number-people__title--wrap .title-error__h2.active {
+  display: block;
+}
+
 .calculate--container .calculate__number-people--wrap .people-input--wrap {
   position: relative;
 }
@@ -213,11 +222,13 @@ button {
 }
 
 .grid__buttons:hover {
-  background: #26c0ab;
+  background: #65f1de;
+  color: black;
 }
 
 .grid__buttons.selected {
   background: #26c0ab;
+  color: black;
 }
 
 .reset {
@@ -229,8 +240,13 @@ button {
   font-weight: 700;
 }
 
+.reset.active {
+  opacity: 1;
+}
+
 .reset:hover {
   opacity: 1;
+  background: #65f1de;
 }
 
 input {
@@ -243,6 +259,7 @@ input {
   background: #f4fafa;
   color: #00494d;
   border: none;
+  border-radius: 0.75rem;
 }
 
 .custom {
@@ -252,5 +269,17 @@ input {
   text-align: center;
   padding: 0;
   font-size: 1.8rem;
+}
+
+.custom:focus {
+  outline: solid #26c0ab 2px;
+}
+
+.bill-input:focus {
+  outline: solid #26c0ab 2px;
+}
+
+.people-input.active {
+  outline: solid orangered 2px;
 }
 /*# sourceMappingURL=styles.css.map */
