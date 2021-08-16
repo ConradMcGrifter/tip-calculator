@@ -54,6 +54,12 @@ h2 {
   margin-bottom: 10rem;
 }
 
+@media only screen and (max-width: 550px) {
+  .logo {
+    margin-top: 5rem;
+  }
+}
+
 .calculator {
   background: white;
   display: -webkit-box;
@@ -74,6 +80,7 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0.5em;
+    border-radius: 2rem 2rem 0 0;
   }
 }
 

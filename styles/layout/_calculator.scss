@@ -1,5 +1,9 @@
 .logo {
     margin-bottom: 10rem;
+
+    @include mobileSize {
+        margin-top: 5rem;
+    }
 }
 
 .calculator {
@@ -14,6 +18,7 @@
     @include mobileSize {
         flex-direction: column;
         padding: 0.5em;
+        border-radius: 2rem 2rem 0 0;
     }
 }
 
