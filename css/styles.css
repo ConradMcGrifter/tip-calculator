@@ -79,7 +79,7 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 2rem 2rem 0 0;
   }
 }
@@ -91,7 +91,7 @@ h2 {
 
 @media only screen and (max-width: 550px) {
   .calculate--container {
-    padding: 0.5em;
+    padding: 0.75em;
   }
 }
 
@@ -178,7 +178,7 @@ h2 {
 
 @media only screen and (max-width: 550px) {
   .total--container {
-    padding: 0.5em;
+    padding: 0.75em;
   }
 }
 
@@ -324,9 +324,7 @@ input:focus {
 }
 
 .custom {
-  background: none;
   color: #5e7a7d;
-  background: #f4fafa;
   text-align: center;
   padding: 0;
   font-size: 1.8rem;

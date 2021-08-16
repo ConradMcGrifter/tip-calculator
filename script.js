@@ -30,18 +30,38 @@ const calc = (num) => {
     // set the global percent
     currentPercent = num;
 
-    if (!customInput.value == "") {
+    // if the user doesnt use the reset button and instead just deletes the number in the bill input, this code will reset the output to 00.00
+    if (billInput.value.length == 0) {
+        tipOutput.innerHTML = "$00.00";
+        totalPerPersonOutput.innerHTML = "$00.00";
+    }
+
+    // this resets the bill input if the user types tries to type a negative number or letters
+    if (billInput.value.includes("-") || validateInput.test(billInput.value)) {
+        billInput.value = "";
+        tipOutput.innerHTML = "$00.00";
+        totalPerPersonOutput.innerHTML = "$00.00";
+    }
+
+    // this resets the number of people input if the user tries to type a letter or negative number
+    if (
+        peopleInput.value.includes("-") ||
+        validateInput.test(peopleInput.value)
+    ) {
+        peopleInput.value = "";
+        tipOutput.innerHTML = "$00.00";
+        totalPerPersonOutput.innerHTML = "$00.00";
+    }
+
+    if (!customInput.value == "" && !customInput.value.includes("-")) {
+        // checks if the custom input has a number inside it
         currentPercent = parseFloat(customInput.value) / 100;
     } else {
         customInput.value = "";
     }
 
     //if the input field is blank or if it contains letters, dont run the code
-    if (
-        billInput.value == "" ||
-        currentPercent == 0 ||
-        validateInput.test(billInput.value)
-    ) {
+    if (billInput.value == "" || currentPercent == 0) {
         return;
     }
 
