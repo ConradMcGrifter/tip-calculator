@@ -14,8 +14,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
     -   [Useful resources](#useful-resources)
 -   [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -28,12 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./finished-screenshot.png)
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [Live version](https://conradmcgrifter.github.io/tip-calculator/)
 
 ## My process
 
@@ -41,7 +38,11 @@ I first messed around in codepen to figure out how I was going to do this projec
 
 ### Built with
 
+vanilla JS + scss
+
 ### What I learned
+
+I learned more about validation and learned more in general about javaScript
 
 ### Useful resources
 
@@ -53,8 +54,3 @@ I first messed around in codepen to figure out how I was going to do this projec
 
 -   [resource 3](https://www.w3schools.com/jsref/jsref_parseint.asp)
     learned how to convert an input string to a number so that I can do math with it
-
--   [resource 4](https://www.techonthenet.com/js/number_tolocalestring.php)
-    toLocaleString method to convert a number into a string with commas and decimals
-
-## Acknowledgments
