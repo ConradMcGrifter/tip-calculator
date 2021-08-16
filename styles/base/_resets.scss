@@ -15,7 +15,7 @@ html {
 body {
     width: 100%;
     min-height: 100%;
-    background: lightblue;
+    background: color(light-grayish-cyan);
     font-family: $font-stack;
     font-size: 2.4rem;
     @include flexCenter(column);
